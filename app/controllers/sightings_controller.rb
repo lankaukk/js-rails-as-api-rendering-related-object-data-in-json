@@ -21,6 +21,7 @@ class SightingsController < ApplicationController
                 :bird => {:only => [:name, :species]},
                 :location => {:only => [:latitude, :longitude]}
             }, :except => [:updated_at, :created_at])
+            
         else
             render json: { message: 'No sighting found with that id' }
         end
